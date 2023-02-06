@@ -7,6 +7,10 @@ import reportWebVitals from './reportWebVitals';
 //Link: https://www.youtube.com/watch?v=bMknfKXIFA8
 //Stopped at 18:00
 
+/**Current Link: https://www.youtube.com/watch?v=0riHps91AzE
+ * Stopped at
+ */
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
