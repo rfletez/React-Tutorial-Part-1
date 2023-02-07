@@ -9,14 +9,17 @@ export default class AddContact extends React.Component {
     add = (event) => {
         event.preventDefault();
 
-        if(this.state.name === "" && this.state.email === "") {
+        if(this.state.name === "" || this.state.email === "") {
             alert("Enter value to all the fields");
             return;
         }
 
         this.props.addContactHandler(this.state);
 
-        console.log(this.state);
+        this.setState({ name:'', email:'' });
+        //Clear the input fields after submission.
+
+       //console.log(this.state);
     }
 
     render() {

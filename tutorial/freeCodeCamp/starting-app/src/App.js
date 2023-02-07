@@ -10,6 +10,9 @@ function App() {
 
   const addingContactHandler = (contact) => {
     console.log(contact);
+
+    setContacts([...contacts, contact])
+    //2nd parameter is to add the new contacts.
   }
 
   return (
