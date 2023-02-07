@@ -14,16 +14,18 @@ export default class AddContact extends React.Component {
             return;
         }
 
+        this.props.addContactHandler(this.state);
+
         console.log(this.state);
     }
-    
+
     render() {
         return (
             <div className='ui main'>
                 <h2>Add Contact</h2>
                 <form className='ui form' onSubmit={this.add}>
                     <div className='field'>
-                        <label>Name</label>
+                        <label>Name: </label>
                         <input type='text' 
                             name='name' 
                             placeholder='Name...' 
@@ -33,7 +35,7 @@ export default class AddContact extends React.Component {
                     </div>
 
                     <div className='field'>
-                        <label>Email</label>
+                        <label>Email: </label>
                         <input type='text' 
                             name='email' 
                             placeholder='Email...'
