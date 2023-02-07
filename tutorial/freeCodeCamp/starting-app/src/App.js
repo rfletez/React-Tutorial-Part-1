@@ -4,6 +4,8 @@ import Header from './components/Header';
 import AddContact from './components/AddContact';
 import ContactList from './components/ContactList';
 import { uuid } from 'uuidv4'; 
+import { BroswerRouter, Switch, Route } from 'react-router-dom';
+
 
 function App() {
 
@@ -45,9 +47,19 @@ function App() {
 
   return (
     <div className='ui container'>
-      <Header/>
+      <BroswerRouter>
+        <Header/>
+
+        <Switch>
+          <Route exact path='/' component={ContactList} />
+          <Route path='/add' component={AddContact} />
+        </Switch>
+
+      </BroswerRouter>
+
+      {/* <Header/>
       <AddContact addContactHandler={ addingContactHandler }/>
-      <ContactList contacts={ contacts } getContactID={removeContactHandler}/>
+      <ContactList contacts={ contacts } getContactID={removeContactHandler}/> */}
     </div>
   );
 }

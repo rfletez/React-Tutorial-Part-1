@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ContactCard from './ContactCard';
 
 const ContactList = (props) => {
@@ -9,7 +10,13 @@ const ContactList = (props) => {
         props.getContactID(id);
     };
 
-    const renderContactList = props.contacts.map((contact) => {
+    const contacts = [{
+        id: "1",
+        name: 'Mike',
+        email: 'mike@email.com'
+    }];
+
+    const renderContactList = contacts.map((contact) => {
         return(
             <ContactCard 
                 propVariable={contact} 
@@ -20,9 +27,17 @@ const ContactList = (props) => {
         );
     });
     return (
-        <div className='ui celled list'>
-            { renderContactList } 
-            {/*Reference variable in JSX */}
+        <div>
+            <h2>
+                Contact List
+                <Link to='/add'>
+                    <button className='ui button blue right'>Add Contact</button>
+                </Link>
+            </h2>
+            <div className='ui celled list'>
+                { renderContactList } 
+                {/*Reference variable in JSX */}
+            </div>
         </div>
     );
 }
