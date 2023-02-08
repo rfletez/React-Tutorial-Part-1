@@ -1,5 +1,5 @@
 /*Link: https://www.youtube.com/watch?v=0riHps91AzE
-Stopped at 30:00 */
+Stopped at 57:00 */
 
 import React from 'react';
 

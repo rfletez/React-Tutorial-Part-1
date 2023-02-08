@@ -51,8 +51,18 @@ function App() {
         <Header/>
 
         <Switch>
-          <Route exact path='/' component={ContactList} />
-          <Route path='/add' component={AddContact} />
+          <Route exact path='/' render={(props) => (
+            <ContactList 
+              {...props} 
+              contacts={ contacts } 
+              getContactId={removeContactHandler} />
+          )}
+          />
+
+          <Route path='/add' render={(props) = (
+            <AddContact {...props} addContactHandler={addingContactHandler} />
+          )}
+          />
         </Switch>
 
       </BroswerRouter>
