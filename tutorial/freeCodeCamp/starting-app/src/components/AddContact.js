@@ -19,6 +19,10 @@ export default class AddContact extends React.Component {
         this.setState({ name:'', email:'' });
         //Clear the input fields after submission.
 
+        this.props.history.push("/");
+        //After persisting the data to local storage, 
+        //We travel back to the home page to see the new list.
+
        //console.log(this.state);
     }
 
