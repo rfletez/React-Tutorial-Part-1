@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 //Stopped at 18:00
 
 /**Current Link: https://www.youtube.com/watch?v=0riHps91AzE
- * Stopped at 1:10:00
+ * Stopped at 1:20:00
  */
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
