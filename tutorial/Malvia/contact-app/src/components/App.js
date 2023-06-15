@@ -6,7 +6,7 @@ import ContactList from './ContactList';
 
 function App() {
   return (
-    <div>
+    <div className='ui container'>
       Hello World!
       <Header/>
       <AddContact/>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class AddContact extends React.Component {
+class AddContact extends React.Component { //class component
     //cannot use a return(), instead use render().
     render() {
         return (

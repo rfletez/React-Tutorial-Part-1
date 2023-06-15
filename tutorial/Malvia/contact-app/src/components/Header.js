@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = () => {
+const Header = () => { //functional component
     return (
         <div className='ui fixed menu'>
             <div className='ui container center'>
