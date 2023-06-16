@@ -2,7 +2,7 @@ import React from 'react';
 import userImg from '../images/user.jpeg';
 
 const ContactCard = (props) => {
-    const [id, name, email] = props.contact;
+    const {id, name, email} = props.contact;
 
     return(
         <div className='item'>
