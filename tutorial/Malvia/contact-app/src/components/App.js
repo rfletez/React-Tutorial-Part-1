@@ -5,10 +5,11 @@ import ContactList from './ContactList';
 
 function App() {
 
-  const [contacts, useContacts] = useState([]);
+  const [contacts, setContacts] = useState([]);
 
   const addContactHandler = (contact) => {
     console.log(`From App Component: ${contact}`);
+    setContacts([...contacts, contact]);
   }
 
   return (
