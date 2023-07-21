@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Welcome from './components/Welcome';
+import Clock from './components/Clock';
 
 function App() {
   const userInfo = {
@@ -14,6 +15,8 @@ function App() {
       <div> <Welcome user={userInfo} /> </div>
       {/* <div> <Welcome user="Tom"/> </div>
       <div> <Welcome user="Sarah"/> </div> */}
+
+      <Clock/>
     </div>
   );
 }
