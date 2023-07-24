@@ -4,6 +4,7 @@ import Welcome from './components/Welcome';
 import Clock from './components/Clock';
 
 import React, {useState, useEffect} from 'react';
+import LoginControl from './components/LoginControl';
 
 
 function App() {
@@ -29,6 +30,11 @@ function App() {
       <button onClick={() => setFlag(!flag)}>Toggle Clock Component</button>
       <br/>
       {flag ? <Clock/> : "No Clock component"}
+
+      <div>
+        <h2>Login Control Component</h2>
+        <LoginControl/>
+      </div>
     </div>
   );
 }
