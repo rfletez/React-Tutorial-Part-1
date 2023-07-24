@@ -6,6 +6,7 @@ import Clock from './components/Clock';
 import React, {useState, useEffect} from 'react';
 import LoginControl from './components/LoginControl';
 import Blog from './components/Blog';
+import Form from './components/Form';
 
 
 function App() {
@@ -58,6 +59,11 @@ function App() {
       <div>
         <h2>Blog Component</h2>
         <Blog contentPosts={posts} />
+      </div>
+
+      <div>
+        <h2>Form Component</h2>
+        <Form />
       </div>
     </div>
   );
