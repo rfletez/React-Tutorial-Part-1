@@ -7,6 +7,8 @@ import React, {useState, useEffect} from 'react';
 import LoginControl from './components/LoginControl';
 import Blog from './components/Blog';
 import Form from './components/Form';
+import Search from './components/Search';
+import Lists from './components/Lists';
 
 
 function App() {
@@ -32,6 +34,16 @@ function App() {
       id: 3,
       title: "React Crash Course",
       content: "Learning ReactJS"
+    },
+    {
+      id: 4,
+      title: "React Hooks",
+      content: "Learning ReactJS"
+    },
+    {
+      id: 5,
+      title: "React Links",
+      content: "Learning ReactJS"
     }
   ];
 
@@ -39,6 +51,17 @@ function App() {
     console.log('Toggle Clicked');
     setFlag(!flag);
   }
+
+
+  const [searchTerm, setSearchTerm] = useState();
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  }
+
+  const filterList = posts.filter((item) => {
+    return( item.title.toLowerCase().includes(searchTerm) );
+  });
+
 
   return (
     <div>
@@ -64,6 +87,12 @@ function App() {
       <div>
         <h2>Form Component</h2>
         <Form />
+      </div>
+
+      <div>
+        <h2>Search and Lists Components</h2>
+        <Search searchItem={searchTerm} handleSearch={handleSearch}/>
+        <Lists list={filterList}/>
       </div>
     </div>
   );
