@@ -9,6 +9,7 @@ import Blog from './components/Blog';
 import Form from './components/Form';
 import Search from './components/Search';
 import Lists from './components/Lists';
+import WelcomeDialog from './components/WelcomeDialog';
 
 
 function App() {
