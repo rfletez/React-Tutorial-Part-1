@@ -20,6 +20,8 @@ function Clock() {
         };
 
     }, [time]);
+    //useEffect will run when the dependency array with state variable (time) 
+    //changes its value.
 
 
     function showDate() {

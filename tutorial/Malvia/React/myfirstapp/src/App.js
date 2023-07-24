@@ -3,11 +3,21 @@ import './App.css';
 import Welcome from './components/Welcome';
 import Clock from './components/Clock';
 
+import React, {useState, useEffect} from 'react';
+
+
 function App() {
+  const [flag, setFlag] = useState(true);
+
   const userInfo = {
     firstName: "John",
     lastName: "Doe"
   };
+
+  const toggle = () => {
+    console.log('Toggle Clicked');
+    setFlag(!flag);
+  }
 
   return (
     <div>
@@ -16,7 +26,9 @@ function App() {
       {/* <div> <Welcome user="Tom"/> </div>
       <div> <Welcome user="Sarah"/> </div> */}
 
-      <Clock/>
+      <button onClick={() => setFlag(!flag)}>Toggle Clock Component</button>
+      <br/>
+      {flag ? <Clock/> : "No Clock component"}
     </div>
   );
 }
